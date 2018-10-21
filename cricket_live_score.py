@@ -18,6 +18,7 @@ score_box = soup_page.findAll("div", {"class": "cb-col cb-col-25 cb-mtch-blk"})
 score_box_len = len(score_box)
 print(score_box_len)
 for i in range(score_box_len):
+    "range of score_box_len"
 	print(score_box[i].a["title"])
 	print(score_box[i].a.text)
 	print()
