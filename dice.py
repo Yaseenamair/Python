@@ -1,6 +1,6 @@
 # Script Name	: dice.py
-# Author		: Craig Richards
-# Created		: 05th February 2017
+# Author		: Yaseen
+# Created		: 05th February 2018
 # Last Modified	:
 # Version		: 1.0
 
@@ -12,7 +12,7 @@
 import random
 
 
-class Die(object):
+class Dice(object):
     # A dice has a feature of number about how many sides it has when it's
     # established,like 6.
     def __init__(self):
@@ -23,7 +23,8 @@ class Die(object):
     to change the instance attributes.
     """
     def set_sides(self, sides_change):
-        if sides_change >= 4:
+        if sides_change >= 1:
+            "if slide is greater than sides_change"
             if sides_change != 6:
                 print("change sides from 6 to ", sides_change, " !")
             else:
@@ -37,8 +38,8 @@ class Die(object):
         return random.randint(1, self.sides)
 
 
-d = Die()
-d1 = Die()
+d = Dice()
+d1 = Dice()
 d.set_sides(4)
 d1.set_sides(4)
 print(d.roll(), d1.roll())
